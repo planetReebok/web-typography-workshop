@@ -1,0 +1,46 @@
+Back in 3000 BCE, reeds were tooled to engrave letters into wet clay tablets in Mesopotamia and Sumer. Cuneiform was used to record literature such as the Epic of Gilgamesh—the oldest epic still known.
+
+We have the ancient Mespotamians by the Tigris River, we have the Egyptians by the Nile, where the papyrus plant is abundant. 
+
+Even with the same reed pen, we have the hollowed version to hold ink to write on papyrus paper.
+
+Early Chinese writing systems were engraved on bones.
+
+Between Shang dynasty (2nd millennium BC) to the Zhou dynasty (11th–3rd century BC), ritual bronzes became a medium for the writing. Early bronze inscriptions were cast (created a wet clay mold in which they wrote with a stylus, then cast in bronze), while later inscriptions were often engraved after the bronze. These bronze scripts became the basis for what we now call the Seal script.
+
+Invention of paper is also dated to this dynasty (202 BCE – 220 CE.) Along with the advent of paper, we have brush scripts develop. Clerical script takes less time to write than seal script, and it likely emerged out of a need for more efficient record keeping demanded by an expanding empire (the territory of the Han dynasty was much larger than that under the Qin). 
+
+Even today, these forms of the Chinese alphabet coexist (and inform different styles of typefaces.)
+
+The seal script is still the most popular style for hanko, or name seals in Japan.
+
+This style of pen encourages pushing the tool instead of pullling, suited for right-to-left writing direction.
+
+Burmese orthography originally followed a square block format, but the cursive format became more popular around the 17th century, when increased literacy led to the wider use of palm leaves and folded paper known as parabaiks.
+
+Paper made from bamboo and palm leaves are blackened, glued and folded together.
+
+In South India, scripts became more rounded, as a result of writing on palm leaves
+
+while in North India, cloth and birch bark allowed for more angular lines.
+
+Book of Kells demonstrates the Irish uncial. Insular script was influential in the development of the Carolignian miniscule. After blackletter developed out of it, the Carolingian minuscule became obsolete, until the 14th century Italian Renaissance, when the humanist minuscule script was also developed from it. By this latter line the Carolingian minuscule is a direct ancestor of most modern-day scripts and typefaces.
+
+The use of parchment declines as paper is more affordable.
+
+Metal type did not replace woodblock printing due to expense of producing the number of pieces required in CJK alphabets. 
+
+The term “uppercase” and “lowercase” come from where they were stored.
+
+Optical sizing was built-into metal type design.
+
+The high-contrast and hairline serifs in Bodoni’s design was enabled by the quality of metal casting and the smoothness of paper.
+
+Instead of using metal type, photo typsetting projects a light through a film negative of a character, while a lens that magnifies or reduces the size of the character.
+
+signal for key -> (65) -> special code into unicode --> sent to computer to renders the image
+
+-letters are saved as a series of coordinates
+-visual form = bezier math
+-it reads coordinates in order
+-fonts are software
