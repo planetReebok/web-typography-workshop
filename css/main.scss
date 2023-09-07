@@ -96,11 +96,11 @@ a.anchor{
 }
 
 ul{
-	margin-bottom: var(--pad-line);
+	margin-bottom: var(--pad);
 }
 
 h3, h5{
-	margin-top: var(--pad-line);
+	margin-top: var(--pad);
 }
 p+p{
 	text-indent: 3rem;
@@ -218,6 +218,9 @@ footer{
 SECTIONS
 -------------------*/
 #syllabus details{
+	margin-bottom: var(--pad);
+}
+#schedule details p{
 	margin-bottom: var(--pad);
 }
 
