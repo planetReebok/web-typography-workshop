@@ -98,6 +98,7 @@ a.anchor{
 ul{
 	margin-bottom: var(--pad-line);
 }
+
 h3, h5{
 	margin-top: var(--pad-line);
 }
@@ -108,26 +109,36 @@ p+p{
 	font-size: var(--size-small);
 	letter-spacing: 0.02em;
 }
+h3{
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
 h3,h5,.schedule-header{
 	@extend .caption;
 }
-li{
+ul li{
 	list-style-type: none;
-	// margin-bottom: .3em;
 	padding-left: 1em;
-	text-indent: -1em;
+	text-indent: -1em; 
 	&:before{
 		content: "—";
 	}
 }
+ol{
+	padding-left: 1em;
+}
+
 pre{
 	tab-size: 1rem;
 	font-size: var(--size-small);
 	color: var(--color-tertiary);
+	overflow: scroll;
 }
 code{
-	font-size: 1.05em;
+	font-size: .85em;
+	line-height: .95;
 	color: var(--color-tertiary);	
+
 }
 
 
@@ -218,17 +229,27 @@ p + pre {
 }
 
 .diagram {
+	margin: var(--pad) 0;
+	font-size: 16px;
   border: 1px solid var(--color-tertiary);
   padding: var(--pad);
   position: relative;
+
+  h1, h2, h3, h4, p, em,{
+    text-transform: none;
+    color: var(--color-base);
+    text-indent: 0;
+  }
+
+  .highlight {
+		background: yellow;
+	}
+
+	#demo {
+		font-weight: bold;
+	}
 }
-.diagram h1, .diagram p, .diagram em {
-  font-size: 16px;
-  text-transform: none;
-  font-family: serif;
-  color: var(--color-base);
-  text-indent: 0;
-}
+
 .diagram h1 {
   font-weight: bold;
   margin-bottom: 1rem;
