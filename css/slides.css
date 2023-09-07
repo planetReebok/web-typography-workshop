@@ -22,6 +22,7 @@ table th {
 }
 table td {
   min-width: 8em;
+  vertical-align: top;
 }
 table th, table td {
   padding: 0.25em 0.5em;
