@@ -3,13 +3,12 @@
 <head>
 	<title>Web Typography @ Letterform Archive</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="icon" 
 		type="image/svg" 
 		href="favicon.svg">
 </head>
 <body>
-	<div class="banner"><img src=""></div>
 	<main>
 		<header class="grid">
 			<div class="title">
@@ -17,13 +16,13 @@
 				<p class="subtitle"><em>Expand your typographic potential</em></p>
 			</div>
 			<div class="info">
-				<time>Thursdays, September 7–28, 2023<br>
+				<time>Thursdays, 9.7–9.28, 2023<br>
 				Letterform Archive, Online</time>
 			</div>
 		</header>
 
 		<section id="syllabus">
-			<h2>Overview</h2>
+			<a class="anchor" href="#overview"><h2>Overview</h2></a>
 			<p>
 				This hands-on workshop is intended for designers new to typography in the browser and will cover how to work with fonts on the web. From standard typesetting to experimental techniques, we will learn various ways to work with digital type—ranging from loading a webfont to animating variable fonts. We will approach the browser as a creative medium by developing a single-serve website that demonstrates intentional typography, in both design and functionality. Instruction will cover ways to control visual composition and basic interactivity on the web, using HTML & CSS. Participants will need no prior knowledge of these languages for this workshop but should be prepared to dive into coding.
 			</p>
@@ -46,100 +45,113 @@
 					</h3>
 					<ul>
 						<li>Load and use webfonts effectively, accessing the embedded features in font files</li>
-						<li>Understand semantic markup of HTML and browser-default styling</li>
+						<li>Understand semantic markup of HTML and browser styles</li>
 						<li>Control typographic expression and layout on a webpage using CSS</li>
-						<li>Become familiar with tools for animation and additional interactivity with typography</li>
+						<li>Become familiar with tools for animation and interactivity</li>
 					</ul>
 				</div>
 			</div>
+
+			<details>
+			<summary>Tools</summary>
+			<p>
+				We will be using the following tools for this class.
+			</p>
+			<ol>
+				<li>
+					A laptop & internet access
+				</li>
+				<li>
+					Browser. Firefox or Chrome is recommended for their Inspector tools.
+				</li>
+				<li>
+					A Text Editor. I will be using <a href="https://www.sublimetext.com/" target="_blank">Sublime Text</a>; <a href="https://code.visualstudio.com/" target="_blank">VS Code</a> is another option.
+				</li>
+				<li>
+					A prototyping tool to quickly mockup designs, such as <a href="https://www.figma.com/">Figma</a> or Adobe programs.
+				</li>
+			</ol>
+			</details>
+
+			<details>
+			<summary>Setup</summary>
+			<ol>
+				<li>Join the <a href="https://join.slack.com/t/slack-ltg8430/shared_invite/zt-22xttdxv5-nM435D8pQBTuOVkicD4udA" target="_blank">Slack Channel</a>. We’ll be using this for all class communications.</li>
+				<li>Create an account on <a href="https://github.com/" target="_blank">Github</a>.</li>
+				<li>Download and install <a href="https://desktop.github.com/" target="_blank">Github Desktop</a>.</li>
+			</ol>
+			</details>
+
+			<details>
+			<summary>Troubleshooting</summary>
+			<p>
+				Try to be patient when writing code. So much of programming is debugging; typos are one of the most common errors! If you find yourself stuck, try breaking your issue down into smaller, more manageable parts.
+			</p>
+			<p>
+				Once you’ve identified those parts, try a search on Google or Stack Overflow for how to solve them, one at a time. These days, ChatGPT might be helpful. That said, be aware that there are many solutions that may not work or are outdated (and ChatGPT will recite a wrong answer with confidence.) While frustrating, these bugs may lead you to discover something new you would not have considered before. If you cannot solve a problem a way you anticipate, try “hacking” it—tackling the issue with the means you currently have. 
+			</p>
+			<p>
+				Use discretion and credit when appropriate when reusing code found from the internet. Information on practical implementation that is available anywhere need not be credited, but exercise caution a specific mechanism or designed funtionality. Is it available for your use? Does it support your design concept?
+			</p>
+			</details>
+
+
 		</section>
 
-		<section id="structure">
+		<section id="notes">
+			
 		</section>
 
 		<section id="schedule">
 			<a class="anchor" href="#schedule"><h2>Schedule</h2></a>
 			<div class="schedule-item">
-				<div class="date">Week 1: September 7</div>
+				<div class="date">Week 1 September 7</div>
 				<div class="topic">						
-					<details>
-						<summary>HTML & CSS</summary>
-						<p>Type & Tools</p>
+					<details open>
+						<summary>Introduction to HTML and basic CSS</summary>
+						<p>Browser as medium</p>
 						<ul>
 							<li>Introductions</li>
-							<li>Lecture: <a href="lectures/type-tools/">Type and Tools</a></li>
+							<li>Review syllabus and setup</li>
+							<li>Lecture: HTML</li>
+							<li>Exercise: Semantic Markup</li>
+							<li>Exercise: Publishing to the Web</li>
+							<li>Lecture: Basic CSS, Loading Fonts</li>
+							<li>Exercise: Inspector Experiment</li>
 						</ul>
+						<p><em>Homework:</em> Design your a typographic single-page website in a tool of your choice</p>
 					
 					</details>
 				</div>
 				
 			</div>
 			<div class="schedule-item">
-				<div class="date">Week 2: September 14</div>
+				<div class="date">Week 2 September 14</div>
 				<div class="topic">						
-					<details>
-						<summary>Layout & Animation</summary>
-						<p>Relationships between letters, spacing, rhythm</p>
-
-						<h5>Morning</h5>
-						<ul>
-							<li>Guest Lecture: <a href="https://docs.google.com/presentation/d/1YLTqtBn_8W0nPOcJPXRGoK81Z-ftcUKM7EeM9Y3nv74/edit?usp=sharing" target="_blank">From Point to Point</a> / <a href="https://corinneang.com/" target="_blank">Corinne Ang</a></li>
-						</ul>
-
-						<h5>Afternoon</h5>
-						<ul>
-							<li>Review: <a href="lectures/tips/">Tips and Tools</a></li>
-							<li>Demo: <a href="https://drive.google.com/file/d/1YxXD6BWhwIw7WURnfDvVMPWofmmk1U1x/view?usp=sharing">What is Spacing?</a> / <a href="https://arrowtype.com/" target="_blank">Stephen Nixon</a></li>
-							<li>Small Group Crits</li>
-						</ul>
-					</details>
+					<div>
+						<summary>CSS Layout & Typography</summary>
+					</div>
 				</div>
 			</div>
 			<div class="schedule-item">
-				<div class="date">Week 3: September 21</div>
-				<div class="topic">						
-					<details>
-						<summary>Variable Fonts & Interactivity</summary>
-						<p>Evaluating your typeface through use</p>
-
-						<h5>Morning</h5>
-						<ul>
-							<li>Lecture: <a href="https://drive.google.com/file/d/1IS_ZijA-smUCtdJBB7Mf8d2iFE6W5om2/view?usp=drive_link" target="_blank">Type Specimens</a> / Joe Newton</li>
-							<li>Individual <a href="https://docs.google.com/spreadsheets/d/1qTtC4CE_HZtVogv3zf9emQpBNRKRkeP_qvB7CC4zlis/edit#gid=1894678010" target="_blank">Crits</a></li>
-						</ul>
-
-						<h5>Afternoon</h5>
-						<ul>
-							<li>Optional Workshop: <a href="lectures/technical-setups/">Technical Setups</a> (Using components, setting up open-type features, variable font settings)</li>
-							<li>Individual <a href="https://docs.google.com/spreadsheets/d/1qTtC4CE_HZtVogv3zf9emQpBNRKRkeP_qvB7CC4zlis/edit#gid=1894678010" target="_blank">Crits</a></li>
-							<li>Studio: Type Specimen</li>
-						</ul>
-					</details>
+				<div class="date">Week 3 September 21</div>
+				<div class="topic"> 
+					<div>
+						<summary>Responsive Design, Animation & Interactivity</summary>
+					</div>
 				</div>
 			</div>
 			<div class="schedule-item">
 				<div class="date">Week 4: September 28</div>
 				<div class="topic">						
-					<details>
+					<div>
 						<summary>Final Presentation</summary>
-						<p>Activate your typeface on the screen</p>
-
-						<h5>Morning</h5>
-						<ul>
-							<li>Lecture: <a href="lectures/typeface-interface/">Typeface as Interface</a></li>
-						</ul>
-
-						<h5>Afternoon</h5>
-						<ul>
-							<li>Optional Workshop: Basic Python and the Macro Panel</li>
-							<li>Small Group Crits</li>
-						</ul>
-					</details>
+					</div>
 				</div>
 			</div>
 		</section>
 		<section id="resources">
-			<h2>Presentations</h2>
+			<a class="anchor" href="#resources"><h2>Resources</h2></a>
 			<ul>
 				<li>Lecture: <a href="lectures/type-tools/">Type and Tools</a></li>
 				<li>Lecture: <a href="lectures/typeface-interface/">Typeface as Interface</a></li>
@@ -156,8 +168,8 @@
 		</div>
 		<div class="colophon">
 			<p>
-				This site is typeset in <a href="https://occupantfonts.com/fonts/amira/" target="_blank">Amira</a> by Cyrus Highsmith.<br>
-				<a href="https://occupantfonts.com">occupantfonts.com</a>
+				This site is currently typeset in your browser default typeface.
+				Adjust your browser font settings to change it.</a>
 			</p>
 		</div>
 	</footer>

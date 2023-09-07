@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Core Web Safe Fonts</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body{
+			font-size: 3vw;
+		}
+		.font-sample{
+			display: flex;
+			border-top: 1px solid;
+			padding: 0.5rem;
+		}
+		.font-sample div{
+			flex: 1;
+		}
+		.headings{
+			font-weight: bold;
+			border-top: 0;
+		}
+		main{
+			width: 60%;
+			margin: auto;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>Core Web Fonts </h1>
+		<header class="font-sample headings">
+			<div>font-family</div>
+			<div class="fallback">fallback assignment</div>	
+		</header>
+
+		<div class="font-sample">
+			<div style="font-family: 'Arial', sans-serif;">Arial</div>
+			<div class="fallback">sans-serif</div>	
+		</div>
+		
+		<div class="font-sample">
+			<div style="font-family: 'Helvetica', sans-serif;">Helvetica</div>
+			<div class="fallback">sans-serif</div>	
+		</div>
+		
+		<div class="font-sample">
+			<div style="font-family: 'Comic Sans MS', curisve;">Comic Sans MS</div>
+			<div class="fallback">cursive</div>	
+		</div>
+		
+		<div class="font-sample">
+			<div style="font-family: 'Courier', monospace;">Courier</div>
+			<div class="fallback">monospace</div>	
+		</div>
+		
+		<div class="font-sample">
+			<div style="font-family: 'Georgia', serif;">Georgia</div>
+			<div class="fallback">serif</div>	
+		</div>
+		
+		<div class="font-sample">
+			<div style="font-family: 'Impact', sans-serif;">Impact</div>
+			<div class="fallback">sans-serif</div>	
+		</div>
+		
+		<div class="font-sample">
+			<div style="font-family: 'Tahoma', sans-serif;">Tahoma</div>
+			<div class="fallback">sans-serif</div>	
+		</div>
+		
+		<div class="font-sample">
+			<div style="font-family: 'Times New Roman', Times, serif;">Times New Roman</div>
+			<div class="fallbac">serif</div>
+		</div>
+
+		<div class="font-sample">
+			<div style="font-family: 'Webdings';">Webdings </div>	
+			<div class="fallbac"> </div>
+		</div>
+	</main>
+</body>

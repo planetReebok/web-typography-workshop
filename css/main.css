@@ -1,0 +1,270 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-dark: rgb(15 15 15);
+  --color-bg: rgb(255 253 230);
+  --color-base: rgb(66, 66, 66);
+  --color-tertiary: rgb(255, 20, 0);
+  --color-txt: rgb(255 255 255);
+  --color-link: rgb(190, 0, 217);
+  --pad: 14px;
+  --pad-small: 0.3rem;
+  --pad-line: 1.25em;
+  --pad: 1rem;
+  --pad-section: 3rem;
+  --width-wide: 1200px;
+  --width-content: 680px;
+  --size-small: 1.1rem;
+  --size-base: 1.4rem;
+  --size-medium: 2rem;
+  --size-large: 65px;
+  --size-xlarge: 90px;
+  --lineheight: 1.25;
+  --wdth: 60;
+  --wght: 450;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: var(--size-base);
+}
+
+body {
+  font-size: var(--size-base);
+  font-weight: 400;
+  line-height: var(--lineheight);
+}
+
+header, footer, section {
+  max-width: var(--width-content);
+  width: 90%;
+  margin: var(--pad-section) auto;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-link);
+  padding-bottom: 1px;
+  border-bottom: 1px solid;
+}
+
+a.anchor {
+  display: block;
+  padding-top: var(--pad);
+  margin-bottom: var(--pad-small);
+}
+
+ul {
+  margin-bottom: var(--pad-line);
+}
+
+h3, h5 {
+  margin-top: var(--pad-line);
+}
+
+p + p {
+  text-indent: 3rem;
+}
+
+.caption, header .info, h3, h5, .schedule-header {
+  font-size: var(--size-small);
+  letter-spacing: 0.02em;
+}
+
+li {
+  list-style-type: none;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+li:before {
+  content: "—";
+}
+
+pre {
+  tab-size: 1rem;
+  font-size: var(--size-small);
+  color: var(--color-tertiary);
+}
+
+code {
+  font-size: 1.05em;
+  color: var(--color-tertiary);
+}
+
+.grid, .schedule-item {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: var(--pad);
+}
+
+header .title {
+  grid-column: span 5;
+}
+header .title h1 {
+  font-size: var(--size-medium);
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+}
+header .subtitle {
+  text-indent: 0.1em;
+  margin-top: 0.2em;
+}
+header .info {
+  grid-column: span 3;
+}
+
+.text-column {
+  grid-column: span 4;
+}
+
+.text-column-wide {
+  grid-column: span 5;
+}
+
+.text-column-wide + .text-column {
+  grid-column: span 3;
+}
+
+.schedule-item {
+  border-bottom: 1px solid;
+  padding: var(--pad-small) 0;
+}
+.schedule-item .date {
+  grid-column: span 2;
+}
+.schedule-item .topic {
+  grid-column: span 6;
+}
+.schedule-item p {
+  margin-bottom: 0;
+}
+
+.schedule-header {
+  padding-top: 0;
+}
+
+summary {
+  cursor: pointer;
+}
+
+footer {
+  border-top: 1px solid;
+  padding: var(--pad) 0;
+}
+footer .people {
+  grid-column: span 3;
+}
+footer .colophon {
+  grid-column: span 5;
+}
+
+/*-----------------
+SECTIONS
+-------------------*/
+#syllabus details {
+  margin-bottom: var(--pad);
+}
+
+/*-----------------
+DIAGRAMS
+-------------------*/
+p + pre {
+  margin-top: var(--pad-medium);
+}
+
+.diagram {
+  border: 1px solid var(--color-tertiary);
+  padding: var(--pad);
+  position: relative;
+}
+
+.diagram h1, .diagram p, .diagram em {
+  font-size: 16px;
+  text-transform: none;
+  font-family: serif;
+  color: var(--color-base);
+  text-indent: 0;
+}
+
+.diagram h1 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.diagram p {
+  margin-bottom: 1rem;
+}
+
+.diagram em {
+  font-style: italic;
+}
+
+.line {
+  height: 1.5em;
+  background: var(--color-base);
+  color: var(--color-bg);
+  margin-bottom: 0.5em;
+}
+.line:last-child {
+  margin-bottom: 0;
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+  background: var(--dark-grey);
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inline {
+  width: 32%;
+  height: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.solid {
+  background: transparent;
+  border: 1px solid var(--color-link);
+}
+
+.marked {
+  background: var(--color-link);
+}
+
+@keyframes vf {
+  0% {
+    font-variation-settings: "wght" 20, "wdth" 100, "slnt" 0;
+  }
+  100% {
+    font-variation-settings: "wght" 140, "wdth" 100, "slnt" 0;
+  }
+}
+@keyframes changecolor {
+  0% {
+    background-color: blue;
+  }
+  50% {
+    background-color: yellow;
+    color: rgba(200, 155, 20, 0.8);
+  }
+  100% {
+    background-color: green;
+  }
+}
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
