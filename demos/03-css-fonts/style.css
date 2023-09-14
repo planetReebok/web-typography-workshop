@@ -23,25 +23,11 @@
 	font-style: italic;
 }
 
-@font-face{
-	font-family: 'Magmatic VF';
-	src: url('fonts/Magmatic-VF-Trial.woff2') format('woff2-variations');
-	font-stretch: 50% 150%;
-	font-weight: 100 900;
-}
 
 body{
-
-}
-
-.occ-oldstyle{
 	font-family: 'Occupant Oldstyle';
 }
 
 .occ-oldstyle-vf{
 	font-family: 'Occupant Oldstyle VF';
-}
-
-.magmatic-vf{
-	font-family: 'Magmatic VF';
 }
