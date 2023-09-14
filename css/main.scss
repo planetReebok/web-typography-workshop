@@ -116,6 +116,7 @@ h3{
 h3,h5,.schedule-header{
 	@extend .caption;
 }
+
 ul li{
 	list-style-type: none;
 	padding-left: 1em;
@@ -124,6 +125,7 @@ ul li{
 		content: "—";
 	}
 }
+
 ol{
 	padding-left: 1em;
 }
@@ -132,7 +134,7 @@ pre{
 	tab-size: 1rem;
 	font-size: var(--size-small);
 	color: var(--color-tertiary);
-	overflow: scroll;
+	overflow: hidden;
 }
 code{
 	font-size: .85em;
@@ -251,6 +253,14 @@ p + pre {
 	#demo {
 		font-weight: bold;
 	}
+	ul li{
+		list-style-type: disc;
+		margin-left: 1em;
+		&:before{
+			content: "";
+		}
+	}
+
 }
 
 .diagram h1 {
@@ -269,15 +279,15 @@ p + pre {
   background: var(--color-base);
   color: var(--color-bg);
   margin-bottom: 0.5em;
-  &:last-child{
-  	margin-bottom: 0;
-  }
+  // &:last-child{
+  // 	margin-bottom: 0;
+  // }
 }
 
 .square {
   width: 80px;
   height: 80px;
-  background: var(--dark-grey);
+  background: var(--color-base);
 }
 
 .flex {

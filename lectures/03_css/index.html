@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>CSS</title>
+		<title>CSS Basics</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="../../css/main.css">
 		<link rel="stylesheet" type="text/css" href="../../css/slides.css">
@@ -92,7 +92,7 @@
 			<section class="slide">
 				<div class="text">
 					<h2>Inline CSS</h2>
-					<p>Inline styles are specified as an attribute inside of an individual HTML element with the syntax style=&quot;property: value;&quot; and applies only to that element. This is the least desirable way, as it can be inefficient and lead to inconsistencies.</p>
+					<p>Inline styles are specified as an attribute inside of an individual HTML element with the syntax <code>style=&quot;property: value;&quot;</code> and applies only to that element. This is the least desirable way, as it can be inefficient and lead to inconsistencies.</p>
 					<pre><code>
 &lt;p style = &quot;color: blue;&quot;&gt; First paragraph text. &lt;/p&gt;
 &lt;p&gt; Second paragraph text. &lt;/p&gt;
@@ -136,61 +136,61 @@
 			</section>
 			<section class="slide">
 				<div class="text">
-					<h2>Inheritance</h2>
-					<p>Inheritance is a key concept in CSS. It refers to how children take on css properties of their parents if they don’t have that property specified. Not all css declarations are inherited.</p>
-					<!-- ```css
-						div {
-						  color: blue;
-						  border: 1px solid gray;
-						}
-						
-						span {
-						  color: red;
-						}
-						``` -->
-				</div>
-			</section>
-			<section class="slide">
-				<div class="text">
-					<h2>The Cascade</h2>
-					<p>Cascade refers to the way the stylesheet processes and assigns weights to rules that apply to the same element, ultimately determining which properties will modify a given element. The weight—how strong a rule is—is determined by the following three parameters:</p>
-					<ol>
-						<li>Origin</li>
-						<li>Specificity</li>
-						<li>Rule Order</li>
-					</ol>
-				</div>
-			</section>
-			<section class="slide">
-				<div class="text">
-					<h2>1. Origin</h2>
-					<p>Stylesheets may come from 3 different sources, processed in the following order</p>
-					<ol>
-						<li><strong>User agent</strong> The browser’s default style sheet.</li>
-						<li><strong>User</strong> Such as the user’s browser options.</li>
-						<li><strong>Author</strong> This is the CSS provided by the page (whether inline, embedded or external.) Inline &gt; Internal &gt; External</li>
-					</ol>
-				</div>
-			</section>
-			<section class="slide">
-				<div class="text">
-					<h2>2. Specificity</h2>
-					<p>When rules within the same stylesheet conflict, the type of selector determines which has more weight</p>
-
-				</div>
-			</section>
-			<section class="slide">
-				<div class="text">
 					<h2>Selectors</h2>
-					<p>By understanding inheritance and the cascade, we can write overarching rules that apply to most elements, then override the properties on individual elements. Selectors help tailor our rules to define specific elements. The more specific the selector, the higher its priority.</p>
+					<p>The selector refers to how the CSS targets elements to style. Instead of writing a rule for every element, we can write overarching rules that apply to most elements, then override the properties on individual elements. Usually, you would want to write the most general rules first, then the more specific ones. Selectors help tailor our rules to define specific elements. The more specific the selector, the higher its priority.</p>
+				</div>
+			</section>
+					<section class="slide">
+				<div class="text">			
+					<h3>Element Selectors</h3>
+					<p>Elemen selectors simply use the HTML tag name to target that element, such as <code>body, p, h1, ul, li, table</code>, etc.</p>
+					<div class="grid">
+						<div class="text-column">
+							<figcaption>Your CSS</figcaption>							
+							<pre><code>
+body{
+	color: red;
+}								
+p{
+	color: blue;
+}
+							</code></pre>
 
-					<h3>Element selector</h3>
-					<p>We’ve already seen the type selector that matches element names.</p>
-					<pre class="language-css"><code class="language-css"><span class="token selector">h2</span> <span class="token punctuation">{</span><br>	<span class="token property">font-size</span><span class="token punctuation">:</span> 3em<span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+						</div>
+						<div class="text-column">
+							<figcaption>Your HTML</figcaption>
+							<pre><code>
+&lt;body&gt;						
+&lt;h1&gt;This is an h1&lt;/h1&gt;
+&lt;p&gt;Paragraphs are blue&lt;/p&gt;
+&lt;h2&gt;This is an h2&lt;/h2&gt;
+&lt;p&gt;This is another paragraph&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;A list item&lt;/li&gt;
+	&lt;li&gt;Another list item&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/body&gt;
+</code></pre>
+							
+						</div>
+					</div>
 
-					<h3>Multiple selection</h3>
-					<p>By separating selectors with commas, you can apply the same rule to multiple HTML elements.</p>
-					<pre class="language-css"><code class="language-css"><span class="token selector">h2, .introduction</span> <span class="token punctuation">{</span><br>	<span class="token property">font-size</span><span class="token punctuation">:</span> 3em<span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+					<div class="diagram">
+						<h1 style="font-size: 2em; color: red">This is an h1</h1>
+						<p style="color: blue">Paragraphs are blue</p>
+						<h2 style="font-size: 1.5em; color: red">This is an h2</h2>
+						<p style="color: blue">This is another paragraph</p>
+						<ul style="color: red; margin-left: 0;">
+							<li>A list item</li>
+							<li>Another list item</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="slide">
+				<div class="text">
+					<h2>Inheritance</h2>
+					<p>Inheritance is a key concept in CSS. It refers to how children take on css properties of their parents if they don’t have that property specified. Not all css declarations are inherited. In the previous example, the <code>h1, h2, ul, li</code> elements all inherited the <code> color: red</code> rule from the <code>body</code>. </p>
 				</div>
 			</section>
 			<section class="slide">
@@ -277,19 +277,123 @@
 						</div>
 					<p><em>Note:</em> Class and IDs names should not include spaces or special characters, or begin with a number.</p>			
 				</div>
+			</section>
+			<section class="slide">
+				<div class="text">
+					<h2>Multiple selection</h2>
+					<p>By separating selectors with commas, you can apply the same rule to multiple HTML elements.</p>
+						<div class="grid">
+							<div class="text-column">
+								<figcaption>Your CSS</figcaption>							
+								<pre><code>
+h2, .introduction{
+	font-size: 2rem;
+}
+							</code></pre>
+							</div>
+							<div class="text-column">
+								<figcaption>Your HTML</figcaption>
+								<pre><code>
+&lt;h2&gt;This is my h2&lt;/h2&gt;
+&lt;p class=&quot;introduction&quot;&gt;
+	This is a paragraph with class '.introduction'
+&lt;/p&gt;
+</code></pre>
+							</div>
+						</div>
+
+						<div class="diagram">
+							<h2 style="font-size: 2rem">This is my h2</h2>
+							<p style="font-size: 2rem" class="introduction">This is a paragraph with class '.introduction'</p>
+						</div>
+				</div>
+				</div>
 			</section>			
+			<section class="slide">
+				<div class="text">
+					<h2>Child selection</h2>
+					<p>By separating selectors with spaces, you can the structure of your HTML—the nested hierarchy—to target specific elements.</p>
+					<div class="grid">
+						<div class="text-column">
+							<figcaption>Your CSS</figcaption>							
+							<pre><code>
+p, h2{
+	font-size: 1rem;
+}
+.summary{
+	background: yellow;
+}
+.summary p{
+	font-size: 2rem;
+}
+
+						</code></pre>
+						</div>
+						<div class="text-column">
+							<figcaption>Your HTML</figcaption>
+								<pre><code>
+&lt;p&gt;This is a regular paragraph&lt;/p&gt;
+&lt;div class=&quot;summary&quot;&gt;
+	&lt;h2&gt;This is an h2 within summary&lt;/h2&gt;
+	&lt;p&gt;
+		This is a paragraph that is nested within a 
+		.summary div
+	&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+						</div>
+					</div>
+
+					<div class="diagram">
+						<p>This is a regular paragraph</p>
+						<div class="summary" style="background: yellow;">
+							<h2 style="font-size: 1rem;">This is an h2 within summary</h2>
+							<p style="font-size: 2rem;">This is a paragraph that is nested within a .summary div</p>
+						</div>
+					</div>
+			</div>
+		</div>
+		</section>
+			<section class="slide">
+				<div class="text">
+					<h2>The Cascade</h2>
+					<p>Cascade refers to the way the stylesheet processes and assigns weights to rules that apply to the same element, ultimately determining which properties will modify a given element. The weight—how strong a rule is—is determined by the following three parameters:</p>
+					<ol>
+						<li>Origin</li>
+						<li>Specificity</li>
+						<li>Rule Order</li>
+					</ol>
+				</div>
+			</section>
+			<section class="slide">
+				<div class="text">
+					<h2>1. Origin</h2>
+					<p>Stylesheets may come from 3 different sources, processed in the following order</p>
+					<ol>
+						<li><strong>User agent</strong> The browser’s default style sheet.</li>
+						<li><strong>User</strong> Such as the user’s browser options.</li>
+						<li><strong>Author</strong> This is the CSS provided by the page (whether inline, embedded or external.) Inline &gt; Internal &gt; External</li>
+					</ol>
+				</div>
+			</section>
+			<section class="slide">
+				<div class="text">
+					<h2>2. Specificity</h2>
+					<p>When rules within the same stylesheet conflict, the type of selector determines which has more weight. These are some common selectors, ordered from least specific to most specific.</p>
+					<ol>
+						<li><strong>Type</strong> Element selectors <code>h1, p, li</code></li>
+						<li><strong>Class</strong> Class selectors <code>.myclass, :hover, [disabled]</code></li>
+						<li><strong>Id</strong> ID selectors <code>#myid</code></li>
+					</ol>
+					<p>The specifity adapts according to whether you use the structure of HTML hierarchy. For example, <code>p a{ color: red;}</code> (a link tag within a paragraph) is more specific than <code> a{ color: blue; }</code> (a link tag anywhere).</p>
+				</div>
+			</section>
+			
 			<section class="slide">
 				<div class="text">
 					<h2>3. Rule order</h2>
 					<p>Between style rules of identical weight, last one wins</p>
 					<p>※ note: the <code>!important</code> rule allows overrides to this hierarchy, but should be used sparingly</p>
-				</div>
-			</section>
-			<section class="slide">
-				<div class="text">
-					<h2>Use the Inspector</h2>
-					<p>The element inspector is a great way to verify the CSS properties applied to your elements. When thinking about CSS properties, imagine that there is an invisible box around each HTML element.
-					</p>
 				</div>
 			</section>
 			<section class="slide">
@@ -341,37 +445,42 @@
 							<tr>
 								<td><code>text-align</code></td>
 								<td>alignment of text</td>
-								<td>left, right, center, justify</td>
+								<td><code>left</code>, <code>right</code>, <code>center</code>, <code>justify</code></td>
 							</tr>
 							<tr>
 								<td><code>font-family</code></td>
 								<td>what typeface</td>
-								<td>see typefaces</td>
+								<td>see <a href="#22">typefaces</a></td>
 							</tr>
 							<tr>
 								<td><code>font-size</code></td>
 								<td>text size</td>
-								<td>see units</td>
+								<td>see <a href="#23">units</a></td>
 							</tr>
 							<tr>
 								<td><code>font-weight</code></td>
 								<td>the weight of your type</td>
-								<td>normal, bolder, 700</td>
+								<td><code>normal</code>, <code>bolder</code>, <code>700</code></td>
 							</tr>
 							<tr>
 								<td><code>font-style</code></td>
 								<td>text formatting</td>
-								<td>normal, italic, oblique</td>
+								<td><code>normal</code>, <code>italic</code>, <code>oblique</code></td>
 							</tr>
 							<tr>
 								<td><code>line-height</code></td>
 								<td>“leading” or height of box surrounding line</td>
-								<td>best declared unit-less, relative to font (see why)</td>
+								<td>best declared unit-less, relative to font, i.e. <code>1.2</code>, <code>0.9</code></td>
+							</tr>
+							<tr>
+								<td><code>letterspacing</code></td>
+								<td>“tracking” or spacing between each letter</td>
+								<td>best declared in ems, relative to font, ie. <code>0.01em</code>, <code>-0.03em</code></td>
 							</tr>
 							<tr>
 								<td><code>text-transform</code></td>
 								<td>text case</td>
-								<td>capitalize, uppercase, lowercase, none</td>
+								<td><code>capitalize</code>, <code>uppercase</code>, <code>lowercase</code>, <code>none</code></td>
 							</tr>
 						</tbody>
 					</table>
@@ -458,7 +567,7 @@
 							<td>the height of the content*</td>
 						</tr>
 					</table>
-					<p>Note: By default, the width and height of the element <em>excludes</em> the padding within the box.</p>
+					<p>Note: *By default, the width and height of the element <em>excludes</em> the padding within the box.</p>
 			</div>
 		</section>
 
@@ -492,7 +601,13 @@
 				</p>
 			</div>
 		</section>
-
+		<section class="slide">
+			<div class="text">
+				<h2>Use the Inspector</h2>
+				<p>The element inspector is a great way to verify the CSS properties applied to your elements. When thinking about CSS properties, imagine that there is an invisible box around each HTML element. <em>Note: You may need to go into your developer tool settings to see the default browser (user-agent) styles.</em>
+				</p>
+			</div>
+		</section>
 		<section class="slide">
 			<div class="text">
 				<h2>Exercise: Inspector Experiment</h2>
@@ -500,14 +615,14 @@
 				<ol>
 					<li>Open up the same webpage.</li>
 					<li>Using the Inspector tools, make adjustments to the website. Experiment with different selectors; dig into the casacade. See what properties are inherited, what isn’t. Dive into the box model.</li>
-					<li>Take a screenshot to share with your group. (Don’t refresh the page, as that will clear your adjustments.)</li>
+					<li>Take a screenshot (Mac: <code>shift + command + 4 + space</code> or Windows: <code>alt + PrtScn</code> to select a window to capture), and share this with your group. (Don’t refresh the page, as that will clear your Inspector adjustments.)</li>
 				</ol>
 			</div>
 		</section>		
 
 		<section class="slide">
 			<div class="text">
-				<h2>Troubleshooting</h2>
+				<h2>CSS Troubleshooting</h2>
 				<ul>
 					<li>Do you have opening and closing brackets?</li>
 					<li>Does your property and value pairs have colons in between them?</li>

@@ -98,7 +98,7 @@ pre {
   tab-size: 1rem;
   font-size: var(--size-small);
   color: var(--color-tertiary);
-  overflow: scroll;
+  overflow: hidden;
 }
 
 code {
@@ -210,6 +210,13 @@ p + pre {
 .diagram #demo {
   font-weight: bold;
 }
+.diagram ul li {
+  list-style-type: disc;
+  margin-left: 1em;
+}
+.diagram ul li:before {
+  content: "";
+}
 
 .diagram h1 {
   font-weight: bold;
@@ -230,14 +237,11 @@ p + pre {
   color: var(--color-bg);
   margin-bottom: 0.5em;
 }
-.line:last-child {
-  margin-bottom: 0;
-}
 
 .square {
   width: 80px;
   height: 80px;
-  background: var(--dark-grey);
+  background: var(--color-base);
 }
 
 .flex {
