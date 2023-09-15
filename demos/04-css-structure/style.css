@@ -7,4 +7,55 @@
 
 body{
 	font-family: 'Magmatic VF';
+	margin: 0;
+	font-size: 16px;
 }
+
+main{
+	background: #D8D1CB;
+	height: 100vh;
+	width: 600px;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
+	box-sizing: border-box;
+	padding: 2rem;
+}
+
+.box1{
+	grid-column-start: 1;
+	grid-column-end: 4;
+	font-size: 400px;
+	line-height: 0.9;
+	font-variation-settings: 'wdth' 150, 'wght' 600, 'XHGT' 0;
+}
+
+.condensed{
+	font-size: 1.5rem;
+	line-height: 0.9;
+	font-variation-settings: 'wdth' 70, 'wght' 400, 'XHGT' 100;
+}
+
+
+.box2{
+	font-size: 2em;
+	grid-column: 4/5;
+	grid-row-start: 1;
+	grid-row-end: 3;
+}
+.special{
+	font-size: 2vw;
+}
+.box3{
+	grid-column-start: 1;
+	grid-column-end: 3;
+	padding-left: 35px;
+}
+
+.label{
+	grid-column: 3 / 5 ;
+}
+
+
+
