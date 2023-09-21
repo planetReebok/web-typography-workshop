@@ -49,15 +49,14 @@ table th:last-child, table td:last-child {
 .slide h1 {
   font-size: var(--size-large);
 }
-.slide h2 {
-  font-size: var(--size-medium);
+.slide h2, .slide h3, .slide h4 {
+  font-size: var(--size-base);
 }
 .slide h3 {
   text-transform: none;
   letter-spacing: 0;
 }
 .slide h3, .slide h4 {
-  font-size: var(--size-base);
   margin-top: var(--pad);
 }
 .slide p {
@@ -65,7 +64,6 @@ table th:last-child, table td:last-child {
 }
 .slide ul {
   max-width: 30em;
-  margin: auto;
   text-align: left;
   margin-bottom: var(--pad);
 }
@@ -172,6 +170,9 @@ p + pre {
 }
 .diagram ul li:before {
   content: "";
+}
+.diagram .caption {
+  font-size: 16px;
 }
 
 .diagram h1 {
@@ -341,6 +342,24 @@ p + pre {
   }
   100% {
     width: 100%;
+  }
+}
+@media (max-width: 1200px) {
+  .layout-slides {
+    --size-base: 1.4rem;
+  }
+  .text {
+    width: 90%;
+    margin: auto;
+    padding-left: 0;
+  }
+}
+@media (max-width: 500px) {
+  .text {
+    width: 100%;
+  }
+  .grid {
+    display: block;
   }
 }
 

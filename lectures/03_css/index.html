@@ -3,6 +3,7 @@
 	<head>
 		<title>CSS Basics</title>
 		<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="../../css/main.css">
 		<link rel="stylesheet" type="text/css" href="../../css/slides.css">
 		<link rel="icon"type="image/svg"href="../../assets/favicon.svg">
@@ -62,21 +63,20 @@
 						</code>
 					</figure>
 					<figcaption>A CSS assignment</figcaption>
-					<h3>Anatomy</h3>
-					<ul>
-						<li><strong>selector</strong> (targeted html element)  <code>p</code></li>
-						<li>opening curly brackets <code>{</code></li>
-						<li>
-							<strong>declaration</strong> (rules applied to that element) <code>color: blue;</code>
-							<ul>
-								<li><strong>property</strong> what you’re formatting, such as size and color) <code>color</code></li>
-								<li>colon  <code>:</code></li>
-								<li><strong>value</strong> (what you’re setting the specified property to be) <code>blue</code></li>
-								<li>semicolon to end value<code>;</code></li>
-							</ul>
+					<table>
+						<tr><td><strong>selector</strong> (targeted html element)</td><td>  <code>p</code></td></tr>
+						<tr><td>opening curly brackets</td><td> <code>{</code></td></tr>
+						<tr><td>
+							<strong>declaration</strong> (rules applied to that element)</td><td> <code>color: blue;</cotd></code>
+							<table>
+								<tr><td><strong>property</strong> what you’re formatting, such as size and color)</td><td> <code>color</code></td></tr>
+								<tr><td>colon  <code>:</code></td></tr>
+								<tr><td><strong>value</strong> (what you’re setting the specified property to be)</td><td> <code>blue</code></td></tr>
+								<tr><td>semicolon to end value</td><td><code>;</code></td></tr>
+							</table>
 						</li>
-						<li>closing curly brackets <code>}</code></li>
-					</ul>
+						<tr><td>closing curly brackets</td><td> <code>}</code></td></tr>
+					</table>
 				</div>
 			</section>
 			<section class="slide">
@@ -450,12 +450,12 @@ p, h2{
 							<tr>
 								<td><code>font-family</code></td>
 								<td>what typeface</td>
-								<td>see <a href="#22">typefaces</a></td>
+								<td>see <a href="#21">typefaces</a></td>
 							</tr>
 							<tr>
 								<td><code>font-size</code></td>
 								<td>text size</td>
-								<td>see <a href="#23">units</a></td>
+								<td>see <a href="#22">units</a></td>
 							</tr>
 							<tr>
 								<td><code>font-weight</code></td>
@@ -519,15 +519,19 @@ p, h2{
 							</tr>
 							<tr>
 								<td><code>rem</code></td>
-								<td>ratio relative to the document root size</td>
+								<td>ratio relative to the document root size (usually <code>16px</code> by default)</td>
 							</tr>
 							<tr>
 								<td><code>%</code></td>
 								<td>percentage ratio relative to the element’s immediate parent container, based on the size of same property of the parent element</td>
 							</tr>
 							<tr>
-								<td><code>vw</code> or <code>vh</code></td>
-								<td>1 viewport unit is 1% of the window width or line-height</td>
+								<td><code>vw</code></td>
+								<td>1 vw unit is 1% of the window width</td>
+							</tr>
+							<tr>
+								<td><code>vh</code></td>
+								<td>1 vh unit is 1% of the window height</td>
 							</tr>
 						</tbody>
 					</table>

@@ -50,15 +50,14 @@ table{
 	h1{
 		font-size: var(--size-large);
 	}
-	h2{
-		font-size: var(--size-medium);
+	h2, h3, h4{
+		font-size: var(--size-base);
 	}
   h3{
     text-transform: none;
     letter-spacing: 0;
   }
   h3, h4{
-    font-size: var(--size-base);
     margin-top: var(--pad);
   }
 	p{
@@ -66,7 +65,6 @@ table{
 	}
 	ul{
 		max-width: 30em;
-		margin: auto;
     text-align: left;
 		&+h4{
 			margin-top: var(--pad-section);
@@ -177,6 +175,9 @@ p + pre {
     &:before{
       content: "";
     }
+  }
+  .caption{
+    font-size: 16px;
   }
 
 }
@@ -355,5 +356,25 @@ p + pre {
   }
   100%{
     width: 100%;
+  }
+}
+
+@media (max-width: 1200px){
+  .layout-slides{
+    --size-base: 1.4rem;
+  }
+  .text{
+    width: 90%;
+    margin: auto;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 500px){
+  .text{
+    width: 100%;
+  }
+  .grid{
+    display: block;
   }
 }
