@@ -18,7 +18,7 @@
 				</div>
 				<footer class="grid">
 					<div class="runner-1">Web Typography Workshop @ Letterform Archive</div>
-					<div class="runner-2">Week 2</div>
+					<div class="runner-2">Week 3</div>
 				</footer>
 			</section>
 
@@ -26,10 +26,7 @@
 				<div class="text">
 					<h2>Position property</h2>
 					<p>
-						Positioning allows you to control the layout of a page using the position property. Positioning allows you to establish elements independent of the normal flow. By default, all elements have a <code>position: static</code> CSS property which gives them their normal flow.
-					</p>
-					<p>
-						Other properties include: <code>relative</code>, <code>absolute</code>, and <code>fixed</code>. Note: postioning has nothing to do with <em>alignment</em> — rather, it is often used to mis-align or disrupt the normal behavior of aligned elements. Use techniques described in <a href="../06_layouts/">Layouts</a> and the <a href="../03_css/#23">Box Model</a> to control your alignments and whitespace overall.
+						Positioning allows you to control the layout of a page using the position property. Positioning allows you to establish elements independent of the normal flow. By default, all elements have a <code>position: static</code> CSS property which gives them their normal flow.	Other position properties include: <code>relative</code>, <code>absolute</code>, and <code>fixed</code>, and are applied along with <code>top, left, right</code>, or <code>bottom</code> properties to shift elements along the X/Y axis. Note: postioning has nothing to do with <em>alignment</em> — rather, it is often used to mis-align or disrupt the normal behavior of aligned elements. Use techniques described in <a href="../06_layouts/">Layouts</a> and the <a href="../03_css/#23">Box Model</a> to control your alignments and whitespace overall structure.
 					</p>
 				</div>
 			</section>
@@ -279,12 +276,42 @@
 		
 			<section class="slide">
 				<div class="text">
+					<h2>Positioning Properties Summary</h2>
+					<p>
+						Position property adjusts the regular flow of HTML by horizontal or vertical units, relative to <code>top / left / right / bottom</code> properties that are additionally declared.
+					</p>
+					<table>
+						<tr>
+							<td><code>static</code></td>
+							<td> this is the default behavior — it is usually not specified this way, unless cancelling out another positioning property. </td>
+						</tr>
+						<tr>
+							<td><code>relative</code></td>
+							<td> offsets relative to its original position in the flow</td>
+						</tr>
+						<tr>
+							<td><code>absolute</code></td>
+							<td> offsets relative to a containing element that does <em>not</em> have static positioning, or the <code>body</code></td>
+						</tr>
+						<tr>
+							<td><code>fixed</code></td>
+							<td> offsets relative to the viewport</td>
+						</tr>
+					</table>
+				</div>
+			</section>
+
+			<section class="slide">
+				<div class="text">
 					<h2>Caution!</h2>
 					<p>
 						Exercise restraint when using positioning properties. It is easy to use <code>absolute</code> positioning to reach pixel perfection—only to realize that on different screen sizes or viewports, the layout looks askew. Always use the underlying <em>flow</em> of the content, and be explicit with your reference points.
 					</p>
 				</div>
 			</section>
+
+
+
 
 			<div class="diagram">
 				<div class="square" style="position: fixed; background: yellow; top: 0; right: 0;">
