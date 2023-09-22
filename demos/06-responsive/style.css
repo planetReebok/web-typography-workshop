@@ -83,3 +83,42 @@ section{
 .frac{
 	font-feature-settings: 'frac' 1;
 }
+
+
+@media (max-width: 1300px){
+	main{
+		width: 80%;
+	}
+}
+
+@media (max-width: 1000px){
+	main{
+		width: 90%;
+		font-size: 15px;
+	}
+}
+
+@media (max-width: 800px){
+	p{
+		width: 100%;
+		max-width: 28em;
+	}
+	.column{
+		width: 100%;
+	}
+	.grid{
+		display: block;
+	}
+	h3{
+		font-size: 1.2rem;
+	}
+
+}
+
+@media (max-width: 500px){
+	section{
+		padding: 1rem;
+	}
+
+}
+

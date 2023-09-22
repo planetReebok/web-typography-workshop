@@ -9,40 +9,53 @@ body{
 	font-family: 'Magmatic VF';
 	margin: 0;
 	font-size: 16px;
+	background: #D8D1CB;
 }
 
 main{
-	background: #D8D1CB;
+	border: 1px solid black;
+	border-top: 0;
+	border-bottom: 0;
 	height: 100vh;
 	width: 600px;
 	margin: auto;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, 30vh);
 	gap: 20px;
 	box-sizing: border-box;
 	padding: 2rem;
 }
 
-.box1{
+.large-letter{
 	grid-column-start: 1;
 	grid-column-end: 4;
 	font-size: 400px;
 	line-height: 0.9;
 	font-variation-settings: 'wdth' 150, 'wght' 600, 'XHGT' 0;
+	position: relative;
+	top: -23px;
+	transition: font-variation-settings 400ms linear;
+}
+
+.large-letter:hover{
+	font-variation-settings: 'wdth' 50, 'wght' 600, 'XHGT' 0;
 }
 
 .condensed{
 	font-size: 1.5rem;
 	line-height: 0.9;
 	font-variation-settings: 'wdth' 70, 'wght' 400, 'XHGT' 100;
+	letter-spacing: 0.02em;
+	transition: font-variation-settings 100ms linear;
 }
 
+.condensed:hover{
+	font-variation-settings: 'wdth' 70, 'wght' 400, 'XHGT' 0;
+}
 
 .box2{
-	font-size: 2em;
 	grid-column: 4/5;
-	grid-row-start: 1;
-	grid-row-end: 3;
 }
 .special{
 	font-size: 2vw;
@@ -56,6 +69,17 @@ main{
 .label{
 	grid-column: 3 / 5 ;
 }
+
+.label{
+	text-transform: uppercase;
+	font-variation-settings: 'wdth' 150, 'wght' 600, 'XHGT' 0;
+}
+
+.name{
+	font-variation-settings: 'wdth' 150, 'wght' 900, 'XHGT' 0;
+}
+
+
 
 
 
