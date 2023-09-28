@@ -81,11 +81,16 @@ table{
 	img, video{
 		display: block;
 		width: 100%;
+    max-width: 100%;
 		height: 100%;
 		max-height: calc(90vh - 150px);
 		object-fit: contain;
     object-position: top left;
 	}
+  video{
+    max-height: 90vh;
+    margin: auto;
+  }
   figcaption{
     margin-top: var(--pad);
     font-size: var(--size-small);
