@@ -28,40 +28,39 @@ window.addEventListener('load', function(){
     }
   });
 
-});
-
-
-//ONLY ANIMATE WHILE IN VIEW
-//VF OBSERVER
-let vfobserver = new IntersectionObserver((entries, observer)=> {
-  entries.forEach(function(entry) {
-    // Pause/Play the animation
-    if (entry.isIntersecting){
-      console.log('play vf', entry);
-      entry.target.style.animationPlayState = "running";
-    } 
-    else {
-      console.log('pause vf', entry);
-      entry.target.style.animationPlayState = "paused";
-    }
-  });
-});
-
-let variableTexts = document.querySelectorAll(".animate");
-variableTexts.forEach(function(el) { vfobserver.observe(el); });
-
-//VIDEO OBSERVER
-let vidobserver = new IntersectionObserver((entries, observer) => { 
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        console.log('play vid', entry);
-        entry.target.play(); 
-      }else{
-        console.log('pause vid', entry);
-        entry.target.pause();        
+  //ONLY ANIMATE WHILE IN VIEW
+  //VF OBSERVER
+  let vfobserver = new IntersectionObserver((entries, observer)=> {
+    entries.forEach(function(entry) {
+      // Pause/Play the animation
+      if (entry.isIntersecting){
+        console.log('play vf', entry);
+        entry.target.style.animationPlayState = "running";
+      } 
+      else {
+        console.log('pause vf', entry);
+        entry.target.style.animationPlayState = "paused";
       }
     });
-}, {threshold: 0.1});
+  });
 
-let videos = document.querySelectorAll('video');
-videos.forEach(function(el) { vidobserver.observe(el); });
+  let variableTexts = document.querySelectorAll(".animate");
+  variableTexts.forEach(function(el) { vfobserver.observe(el); });
+
+  //VIDEO OBSERVER
+  let vidobserver = new IntersectionObserver((entries, observer) => { 
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          console.log('play vid', entry);
+          entry.target.play(); 
+        }else{
+          console.log('pause vid', entry);
+          entry.target.pause();        
+        }
+      });
+  }, {threshold: 0.1});
+
+  let videos = document.querySelectorAll('video');
+  videos.forEach(function(el) { vidobserver.observe(el); });
+
+});

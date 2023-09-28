@@ -17,6 +17,10 @@
 				<h1>JavaScript</h1>
 				<h2>Designing interaction</h2>
 			</div>
+			<footer class="grid">
+			  <div class="runner-1">Web Typography Workshop @ Letterform Archive</div>
+			  <div class="runner-2">Week 4</div>
+			</footer>
 		</section>
 		<section class="slide">
 			<div class="text">
@@ -69,6 +73,7 @@
 					<li>Click</li>
 					<li>Drag & drop</li>
 					<li>Scroll</li>
+					<li>Input (field entry, slider range)</li>
 					<li>Keydown / keyup</li>
 					<li>Window resize*</li>
 				</ul>
@@ -277,10 +282,13 @@ colors.length // 3
 					<pre><code>
 let numbers = {e: 2.7183, pi: 3.1416};			
 					</code></pre>
-					<p>Each item in the object has a <em>key</em> and a <em>value.</em> You use the key to get at the value! You can access the value either by a <code>.</code> before the key or by inserting the key within square brackets <code>[]</code>. If using square brackets, make sure to surround the key in quotes <code>''</code>.</p>
+					<p>Each item in the object has a <em>key</em> and a <em>value.</em> You use the key to get at the value! You can access the value either by a <code>.</code> before the key or by inserting the key within square brackets <code>[]</code>. If using square brackets, make sure to surround the key in quotes <code>''</code> if you’re using a string key. If you are using a variable as a key, you must use the bracket notation.</p>
 					<pre><code>
 numbers.e // 2.7183
 numbers['pi'] // 3.1416
+
+let myKey = 'e';
+numbers[myKey] // 2.7183
 					</code></pre>
 				</div>
 			</section>
@@ -415,7 +423,6 @@ sayHi();
 				<div class="text">
 					<h3>Parameters and arguments</h3>
 					<p>A function may need inputs to process its statements. These inputs are known as <em>parameters</em> and are used as variables in the function’s statements — you can give them whatever name is appropriate. <em>Arguments</em> are inputs passed into the function when it is called. When you expect a function to provide an answer or output, it’s know as the <em>return value</em></p>
-					<p class="caption">The above function can be re-written to be more general.</p>
 					<pre><code>
 //sets up "something" as a parameter.
 function saySomething(something) { 	
@@ -424,7 +431,8 @@ function saySomething(something) {
 }
 
 //call saySomething function via the function name and parentheses (). 
-saySomething("Hi"); // executes the same statements as above								
+saySomething("Hi");  // executes the same statements as before
+saySomething("Bye"); // but you can reuse the function							
 					</code></pre>
 					<p class="caption">You can also set up multiple arguments</p>
 					<pre><code>
