@@ -39,7 +39,7 @@ body{
     color: black;
 }
 
-body.darkmode{
+.darkmode{
     background: black;
     color: white;
     --grad: -100;
