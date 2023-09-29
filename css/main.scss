@@ -39,14 +39,14 @@ h1,h2,h3,h4,h5,h6{
 }
 
 
-// @font-face{
-//   font-family: 'Magmatic VF';
-//   src: url(../fonts/Magmatic-VF.woff2);
-// }
-// .magmatic{
-//   font-family: 'Magmatic VF';
-//   font-variation-settings: "wdth" 100, "wght" var(--wght);
-// }
+@font-face{
+  font-family: 'Magmatic VF';
+  src: url(../demos/03-css-fonts/fonts/vfs/Magmatic-VF-Trial.woff2);
+}
+.magmatic{
+  font-family: 'Magmatic VF';
+  font-variation-settings: "wdth" 100, "wght" 400, "XHGT" 0;
+}
 
 // @font-face{
 //   font-family: 'Amira';
@@ -99,7 +99,7 @@ ul{
 	margin-bottom: var(--pad);
 }
 
-h3, h5{
+h3, h5, blockquote{
 	margin-top: var(--pad);
 }
 p+p{
@@ -116,6 +116,7 @@ h3{
 h3,h5,.schedule-header{
 	@extend .caption;
 }
+
 ul li{
 	list-style-type: none;
 	padding-left: 1em;
@@ -124,6 +125,7 @@ ul li{
 		content: "—";
 	}
 }
+
 ol{
 	padding-left: 1em;
 }
@@ -132,7 +134,7 @@ pre{
 	tab-size: 1rem;
 	font-size: var(--size-small);
 	color: var(--color-tertiary);
-	overflow: scroll;
+	overflow: hidden;
 }
 code{
 	font-size: .85em;
@@ -224,106 +226,11 @@ SECTIONS
 	margin-bottom: var(--pad);
 }
 
-/*-----------------
-DIAGRAMS
--------------------*/
-p + pre {
-  margin-top: var(--pad-medium);
-}
 
-.diagram {
-	margin: var(--pad) 0;
-	font-size: 16px;
-  border: 1px solid var(--color-tertiary);
-  padding: var(--pad);
-  position: relative;
-
-  h1, h2, h3, h4, p, em,{
-    text-transform: none;
-    color: var(--color-base);
-    text-indent: 0;
-  }
-
-  .highlight {
-		background: yellow;
-	}
-
-	#demo {
-		font-weight: bold;
-	}
-}
-
-.diagram h1 {
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-.diagram p {
-  margin-bottom: 1rem;
-}
-.diagram em {
-  font-style: italic;
-}
-
-.line {
-  height: 1.5em;
-  background: var(--color-base);
-  color: var(--color-bg);
-  margin-bottom: 0.5em;
-  &:last-child{
-  	margin-bottom: 0;
-  }
-}
-
-.square {
-  width: 80px;
-  height: 80px;
-  background: var(--dark-grey);
-}
-
-.flex {
-  display: flex;
-  justify-content: space-between;
-}
-
-.inline {
-  width: 32%;
-  height: 1.5em;
-  margin-bottom: 0.5em;
-}
-
-.solid {
-  background: transparent;
-  border: 1px solid var(--color-link);
-}
-
-.marked {
-  background: var(--color-link);
-}
-
-@keyframes vf {
-  0% {
-    font-variation-settings: "wght" 20, "wdth" 100, "slnt" 0;
-  }
-  100% {
-    font-variation-settings: "wght" 140, "wdth" 100, "slnt" 0;
-  }
-}
-@keyframes changecolor {
-  0% {
-    background-color: blue;
-  }
-  50% {
-    background-color: yellow;
-    color: rgba(200, 155, 20, 0.8);
-  }
-  100% {
-    background-color: green;
-  }
-}
 
 @media print {
-	body{
-		background: white;
-		color: black;
-	}
+  body{
+    background: white;
+    color: black;
+  }
 }
