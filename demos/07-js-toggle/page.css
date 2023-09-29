@@ -39,6 +39,30 @@ body{
     color: black;
 }
 
+body.darkmode{
+    background: black;
+    color: white;
+    --grad: -100;
+}
+
+.darkmode h3{
+    color: yellow;
+}
+
+#darkmodeTrigger{
+    margin-top: 1em;
+    border: 1px solid;
+    padding: 10px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+#darkmodeTrigger:hover{
+    background: grey;
+    cursor: pointer;
+}
+
 
 article{
     padding: var(--pad);
